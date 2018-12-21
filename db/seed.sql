@@ -13,3 +13,12 @@ rent DECIMAL
 
 insert into houses (name, address, city, state, zip, img, mortgage, rent)
  values('Joe', '12333 Flintlock Way', 'Herriman', 'UT', 84096, 'aofmeklfdfmaldkfmalkena', 1234, 123)
+
+select * from houses;
+alter table houses
+add img text;
+alter table houses
+add mortgage DECIMAL;
+alter table houses
+add rent DECIMAL;
+select * from houses;
