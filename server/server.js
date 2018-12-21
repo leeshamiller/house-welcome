@@ -13,6 +13,6 @@ massive(CONNECTION_STRING).then((dbInstance) => {
     console.log('db connected yall')
 })
 
-
+app.get('/api/houses', ctrl.getAllHouses);
 
 app.listen(SERVER_PORT, () => console.log(`${SERVER_PORT} days until Christmas!`))
