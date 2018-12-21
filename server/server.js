@@ -14,5 +14,6 @@ massive(CONNECTION_STRING).then((dbInstance) => {
 })
 
 app.get('/api/houses', ctrl.getAllHouses);
+app.post('/api/house', ctrl.addHouse);
 
 app.listen(SERVER_PORT, () => console.log(`${SERVER_PORT} days until Christmas!`))
