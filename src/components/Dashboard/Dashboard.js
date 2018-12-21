@@ -20,8 +20,14 @@ class Dashboard extends Component {
             })
         })
     }
-    componentDidMount(){
+    componentDidMount() {
         this.getAllHouses()
+    }
+
+    deleteHouse(id) {
+        axios.delete(`/api/house/${id}`).then((res) => {
+            this.getAllHouses(res.data)
+        })
     }
 
     render() {
@@ -34,6 +40,7 @@ class Dashboard extends Component {
                 city={house.city}
                 state={house.state}
                 zip={house.zipcode}
+                deleteHouse={() => this.deleteHouse(house.id)}
                 />
             )
         })
